@@ -1,6 +1,6 @@
 # Creates pseudo distributed hadoop 2.7.1
 #
-# docker build -t sequenceiq/hadoop .
+# docker build -t dennis/hadoop .
 
 FROM sequenceiq/pam:centos-6.5
 MAINTAINER SequenceIQ
