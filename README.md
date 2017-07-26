@@ -1,6 +1,3 @@
-[![Docker Build Statu](https://img.shields.io/docker/build/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/ouyi/hadoop-docker/)
-[![Docker Automated buil](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/ouyi/hadoop-docker/)
-
 # Apache Hadoop 2.7.1 in a Docker container
 
 Hadoop in a pseudo distributed mode in a Docker container, forked from [sequenceiq](https://github.com/ouyi/hadoop-docker). The changes are:
@@ -12,7 +9,7 @@ Hadoop in a pseudo distributed mode in a Docker container, forked from [sequence
 **Make sure that SELinux is disabled on the host. If you are using boot2docker you don't need to do anything.**
 
 ```
-docker run -P -it ouyi/hadoop-docker /etc/bootstrap.sh -bash
+docker run -P -it farberg/hadoop-docker /etc/bootstrap.sh -bash
 ```
 
 ## Testing
