@@ -9,14 +9,14 @@
     </property>
     <property>
         <name>mapreduce.reduce.memory.mb</name>
-        <value>512</value>
+        <value>4096</value>
     </property>
     <property>
         <name>mapreduce.map.java.opts</name>
-        <value>-Xmx150m</value>
+        <value>-Xmx4096m</value>
     </property>
     <property>
         <name>mapreduce.reduce.java.opts</name>
-        <value>-Xmx300m</value>
+        <value>-Xmx4096m</value>
     </property>
 </configuration>
