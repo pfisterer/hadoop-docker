@@ -26,8 +26,8 @@ RUN yum -y install java-1.8.0-openjdk-devel.x86_64 && yum clean all
 COPY java_env.sh /etc/profile.d/java_env.sh
 
 # download native support
-RUN mkdir -p /tmp/native
-RUN curl -L https://github.com/sequenceiq/docker-hadoop-build/releases/download/v2.7.5/hadoop-native-64-2.7.5.tgz | tar -xz -C /tmp/native
+#RUN mkdir -p /tmp/native
+#RUN curl -L https://github.com/sequenceiq/docker-hadoop-build/releases/download/v2.7.5/hadoop-native-64-2.7.5.tgz | tar -xz -C /tmp/native
 
 # hadoop
 RUN curl -s http://www.eu.apache.org/dist/hadoop/common/hadoop-2.7.5/hadoop-2.7.5.tar.gz | tar -xz -C /usr/local/
@@ -64,8 +64,8 @@ RUN curl -s http://www-eu.apache.org/dist/tez/0.8.5/apache-tez-0.8.5-bin.tar.gz 
 RUN $HADOOP_PREFIX/bin/hdfs namenode -format
 
 # fixing the libhadoop.so like a boss
-RUN rm -rf /usr/local/hadoop/lib/native
-RUN mv /tmp/native /usr/local/hadoop/lib
+#RUN rm -rf /usr/local/hadoop/lib/native
+#RUN mv /tmp/native /usr/local/hadoop/lib
 
 ADD ssh_config /root/.ssh/config
 RUN chmod 600 /root/.ssh/config
